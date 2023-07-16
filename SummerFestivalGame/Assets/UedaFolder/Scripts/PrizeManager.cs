@@ -22,7 +22,7 @@ public class PrizeManager : MonoBehaviour
         {
             SaveManager.Money += _prizeCost;
             Debug.Log($"nowMoney{SaveManager.Money}");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
