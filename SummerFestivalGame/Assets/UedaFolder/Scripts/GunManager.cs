@@ -9,6 +9,7 @@ public class GunManager : MonoBehaviour
     [SerializeField] GameObject _bulletPrefab ;
     [SerializeField] Slider _chargeSlider;
     [SerializeField] Camera _camera ;
+    [SerializeField] int MaxChargeFrame = 5;
     [SerializeField] float _shotSpeed;
     [SerializeField] int MaxMagazine = 5;
     [SerializeField] int _reloadCost = 500;
@@ -33,10 +34,19 @@ public class GunManager : MonoBehaviour
             {
                 break;
             }
-            if (result > value)
+            
+            if (result > value )
             {
-                result = 0f;
-                count = 1;
+                bool flag = await MaxChargeShot();
+                if (!flag)
+                {
+                    result = 0f;
+                    count = 1;
+                }
+                else
+                {
+                    break;
+                }
             }
             await UniTask.DelayFrame(1);
             count++;
@@ -44,6 +54,22 @@ public class GunManager : MonoBehaviour
             Debug.Log($"result{result}");
         }
         return result / value;
+    }
+    async UniTask<bool> MaxChargeShot()
+    {
+        int Frame = 0;
+        bool result = false;
+        while (Frame < MaxChargeFrame)
+        {
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                result = true;
+                break;
+            }
+            await UniTask.DelayFrame(1);
+            Frame += 1;
+        }
+        return result;
     }
     // Update is called once per frame
     async void Update()
