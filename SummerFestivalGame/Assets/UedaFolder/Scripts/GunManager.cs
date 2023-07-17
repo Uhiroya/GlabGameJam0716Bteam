@@ -17,10 +17,12 @@ public class GunManager : MonoBehaviour
     int _shotCount = 0;
     float _shotInterval = 0.5f;
     float _shotTime = 0f;
+    AudioSource _audioSource ;
+    AudioClip _audioClip ;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
     float value = 10000;
     async UniTask<float> ChargeShot() 
@@ -82,6 +84,7 @@ public class GunManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && _shotTime > _shotInterval)
         {
             var result = await ChargeShot();
+            _audioSource.PlayOneShot(_audioSource.clip);
             result = Mathf.Clamp(result, 0.3f, 1f);
             Debug.Log($"result{result}");
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
