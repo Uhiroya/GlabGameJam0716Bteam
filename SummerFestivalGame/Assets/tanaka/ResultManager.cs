@@ -12,15 +12,16 @@ public class ResultManager : MonoBehaviour
     Text FishResult;
     [SerializeField]
     Text SumResult;
+
     // Start is called before the first frame update
     void Start()
     {
         GunResult.text = $"{SaveManager.ShootResult}‰~";
-        FishResult.text =$"{SaveManager.GoldFishingResult}‰~";
+        FishResult.text =$"{ScoopController._score}‰~";
         //SumResult.text = "" + UIManager.scoreText + "‰~";
-        SumResult.text = $"{SaveManager.Money}‰~";
+        SumResult.text = $"{SaveManager.ShootResult + ScoopController._score}‰~";
 
-        Invoke("ChangeScene", 4);
+        Invoke("ChangeScene", 5);
     }
 
     // Update is called once per frame
