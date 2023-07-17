@@ -7,6 +7,10 @@ TagManager:
   - RightWall
   - LeftWall
   - Bullet
+  - Fish1
+  - Fish2
+  - Fish3
+  - Scoop
   layers:
   - Default
   - TransparentFX
