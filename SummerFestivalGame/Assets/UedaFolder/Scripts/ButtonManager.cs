@@ -22,7 +22,7 @@ public class ButtonManager : MonoBehaviour
 
     public async void OnDrop()
     {
-        await UniTask.Delay(1000);
+        await UniTask.Delay(150);
         SceneManager.LoadScene( _targetScene );
     }
 }

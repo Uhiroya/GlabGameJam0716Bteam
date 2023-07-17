@@ -11,6 +11,10 @@ TagManager:
   - Fish2
   - Fish3
   - Scoop
+  - Snack
+  - Robot
+  - Game
+  - RubberDuck
   layers:
   - Default
   - TransparentFX
