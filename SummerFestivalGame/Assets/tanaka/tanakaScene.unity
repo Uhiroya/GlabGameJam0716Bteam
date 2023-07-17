@@ -1112,53 +1112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prizeCost: 100
---- !u!1 &1059208338
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1059208339}
-  - component: {fileID: 1059208340}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1059208339
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059208338}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 421.3018, y: 260.3647, z: -125.14239}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1059208340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059208338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3102e1bbabf3b4742a0461970332efbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObj: {fileID: 1810605287}
-  minute: 0
-  seconds: 0
 --- !u!1 &1094824542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,11 +1147,11 @@ RectTransform:
   m_Father: {fileID: 1807050082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 250, y: 50}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1094824544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,7 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.89345354, b: 0.7962264, a: 1}
+  m_Color: {r: 0.9528302, g: 0.81854504, b: 0.46203277, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1272,11 +1225,11 @@ RectTransform:
   m_Father: {fileID: 1807050082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &1107290425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6173727, g: 0.8679245, b: 0.81503695, a: 1}
+  m_Color: {r: 0.7736917, g: 0.9716981, b: 0.9337542, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1423,7 +1376,7 @@ GameObject:
   - component: {fileID: 1130278999}
   - component: {fileID: 1130278998}
   m_Layer: 0
-  m_Name: TimerManager
+  m_Name: UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1441,9 +1394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3102e1bbabf3b4742a0461970332efbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObj: {fileID: 1909993064}
-  minute: 0
-  seconds: 0
+  scoreText: {fileID: 1810605287}
+  timeText: {fileID: 1909993064}
+  countdownMinutes: 2
 --- !u!4 &1130278999
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,7 +1410,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1144185412
 GameObject:
@@ -1593,7 +1546,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 141, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1157878696
 MonoBehaviour:
@@ -2063,7 +2016,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 5551029456617623280, guid: 003eb7110cdd42740a2cbd42f23f7975, type: 3}
+  _chargeSlider: {fileID: 0}
   _camera: {fileID: 632418599}
+  MaxChargeFrame: 5
   _shotSpeed: 3
   MaxMagazine: 5
   _reloadCost: 500

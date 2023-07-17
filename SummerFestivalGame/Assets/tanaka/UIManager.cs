@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    Text textObj;
+    Text scoreText;
+    
     [SerializeField]
     Text timeText;
 
@@ -23,8 +24,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //timeText = GetComponent<Text>();
-        countdownSeconds = countdownMinutes * 60;
+               countdownSeconds = countdownMinutes * 60;
     }
 
     // Update is called once per frame
@@ -45,6 +45,6 @@ public class UIManager : MonoBehaviour
     public void ExpressMoney()
     {
        // score += point;
-        textObj.text = "" + SaveManager.Money;
+        scoreText.text = "" + SaveManager.Money;
     }
 }
