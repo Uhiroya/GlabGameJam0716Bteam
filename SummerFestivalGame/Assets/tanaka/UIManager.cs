@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
         }
         if (countdownSeconds <= 0)
         {
+            SaveManager.ShootResult = SaveManager.Money;
             Invoke("ChangeScene", 1);
         }
             
