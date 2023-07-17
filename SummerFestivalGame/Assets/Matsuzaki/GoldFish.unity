@@ -1405,6 +1405,7 @@ MonoBehaviour:
   _audioSource: {fileID: 0}
   _audioSource2: {fileID: 8300000, guid: ef871896a785f134e8ef275bdad96741, type: 3}
   _audioSource3: {fileID: 8300000, guid: 9ec2ad28bb9364b4e8c22554821a5ad3, type: 3}
+  _audioSource4: {fileID: 8300000, guid: b82fdde5c58ddcf49a93912de24c7125, type: 3}
 --- !u!82 &1831692737
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1720,7 +1721,7 @@ GameObject:
   - component: {fileID: 870618878591189176}
   m_Layer: 0
   m_Name: Scoop
-  m_TagString: Untagged
+  m_TagString: Scoop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,7 +1970,6 @@ MonoBehaviour:
   _fish3Point: 1000
   _audioSource: {fileID: 870618878591189173}
   _audioSource2: {fileID: 870618878591189172}
-  _meshRenderer: {fileID: 0}
 --- !u!135 &870618878591189176
 SphereCollider:
   m_ObjectHideFlags: 0

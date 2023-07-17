@@ -8,7 +8,7 @@ public class ScoopController : MonoBehaviour
     //カーソル座標を取得するための変数
     Vector3 _screenPoint;
     //スコア用の変数
-    int _score = 0;
+    public static int _score = 0;
     //スコア用のテキスト
     [SerializeField] Text _text;
     //金魚1のスコア
@@ -18,7 +18,6 @@ public class ScoopController : MonoBehaviour
 
     [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioSource _audioSource2;
-    [SerializeField] MeshRenderer _meshRenderer;
 
     private bool _isFish1 = false;
     private bool _isFish2 = false;
@@ -64,6 +63,10 @@ public class ScoopController : MonoBehaviour
             _fishController.FishDestroy();
             SetScore();
             _isFish3 = false;
+        }
+        else if(Input.GetMouseButtonDown(0))
+        {
+            _audioSource2.Play();
         }
     }
 
