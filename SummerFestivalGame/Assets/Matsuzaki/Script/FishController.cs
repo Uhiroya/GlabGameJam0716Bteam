@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-
+    [SerializeField] private float _timer;
     void Start()
     {
         
@@ -13,14 +13,15 @@ public class FishController : MonoBehaviour
 
     void Update()
     {
-        
+        _timer += Time.deltaTime;
+        if ( _timer >= 7.5)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void FishDestroy()
     {
-        if(other.gameObject.tag == "Scoop")
-        {
-            Destroy(this.gameObject);
-        }
+        Destroy(gameObject);
     }
 }

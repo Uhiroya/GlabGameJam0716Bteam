@@ -7,10 +7,15 @@ public class TimerController : MonoBehaviour
 {
     [SerializeField] Text _text;
     [SerializeField] float _timer;
+    [SerializeField] AudioClip _audioSource;
+    [SerializeField] AudioClip _audioSource2;
+    [SerializeField] AudioClip _audioSource3;
+    AudioSource _audio;
+    bool _playSound3 = true;
 
     void Start()
     {
-        
+        _audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,9 +24,15 @@ public class TimerController : MonoBehaviour
         _timer -= Time.deltaTime;
         _text.text = _timer.ToString("F2");
 
-        if(_timer >= 0)
+       if(_timer <= 30 && _playSound3)
         {
-            //ƒV[ƒ“‚ÌØ‚è‘Ö‚¦
+            _audio.clip = _audioSource3;
+            _audio.Play();
+            _playSound3 = false;
+        }
+       else if(_timer <= 0.5)
+        {
+           
         }
     }
 }
