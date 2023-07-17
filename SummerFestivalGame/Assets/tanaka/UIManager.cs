@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     public int countdownMinutes = 3;
     private float countdownSeconds;
     private bool _fastBGMflag = true;
+    private bool _endBGMflag = true;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +44,12 @@ public class UIManager : MonoBehaviour
             _fastBGMflag = false;
             //print("�Ă΂ꂽ");
         }
-        if (countdownSeconds <= 0)
+        if (countdownSeconds <= 0 && _endBGMflag)
         {
+            GetComponent<AudioSource>().Play();
             SaveManager.ShootResult = SaveManager.Money;
             Invoke("ChangeScene", 1);
+            _endBGMflag = false;
         }
             
         ExpressMoney();
@@ -67,6 +70,7 @@ public class UIManager : MonoBehaviour
 
     void ChangeScene()
     {
+        
         SceneManager.LoadScene(sceneName);
     }
 }
