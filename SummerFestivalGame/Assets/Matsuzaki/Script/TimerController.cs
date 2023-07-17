@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerController : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public class TimerController : MonoBehaviour
     [SerializeField] AudioClip _audioSource;
     [SerializeField] AudioClip _audioSource2;
     [SerializeField] AudioClip _audioSource3;
+    [SerializeField] AudioClip _audioSource4;
     AudioSource _audio;
     bool _playSound3 = true;
+    bool _playSound4 = true;
 
     void Start()
     {
@@ -30,9 +33,15 @@ public class TimerController : MonoBehaviour
             _audio.Play();
             _playSound3 = false;
         }
-       else if(_timer <= 0.5)
+       else if(_timer <= 0.5f && _playSound4)
         {
-           
+            _audio.clip = _audioSource4;
+            _audio.Play();
+            _playSound4 = false;
+        }
+       else if( _timer <= 0)
+        {
+            SceneManager.LoadScene("ResultScene");
         }
     }
 }
