@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UedaFolder/TitleScene.unity
+    guid: 98114ab778057b840ab70ce1ba4dc0de
+  - enabled: 1
+    path: Assets/UedaFolder/Shoting1.unity
+    guid: 916249cda148b6048aeacfdf59b8a4f6
   m_configObjects: {}

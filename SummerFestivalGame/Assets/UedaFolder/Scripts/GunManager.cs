@@ -24,20 +24,15 @@ public class GunManager : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
     }
-    float value = 10000;
+    float MaxChargeTime = 10f;
     async UniTask<float> ChargeShot() 
     {
-        int count = 1;
+        float count = Time.deltaTime + 1f;
         float result = 0f;
-        while (true)
+        while (!Input.GetKeyUp(KeyCode.Mouse0))
         {
-            result = Mathf.Pow(count , 1.8f);
-            if (Input.GetKeyUp(KeyCode.Mouse0))
-            {
-                break;
-            }
-            
-            if (result > value )
+            result = Mathf.Pow(count,4f) ;        
+            if (result > MaxChargeTime )
             {
                 bool flag = await MaxChargeShot();
                 if (!flag)
@@ -47,17 +42,20 @@ public class GunManager : MonoBehaviour
                 }
                 else
                 {
-                    result = value;
+                    result = MaxChargeTime;
                     break;
                 }
             }
             await UniTask.DelayFrame(1);
-            count++;
-            _chargeSlider.value = result / value;
-            Debug.Log($"result{result}");
+            count += Time.deltaTime;
+            _chargeSlider.value = result / MaxChargeTime;
+            //Debug.Log($"result{result}");
         }
-        return result / value;
+        return result / MaxChargeTime;
     }
+
+
+        
     async UniTask<bool> MaxChargeShot()
     {
         int Frame = 0;

@@ -2880,7 +2880,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1655299884}
   timeText: {fileID: 1198608481}
-  countdownMinutes: 2
+  _audioSource: {fileID: 0}
+  _audioClip: {fileID: 0}
+  sceneName: TitleScene
+  countdownMinutes: 1
 --- !u!4 &1747559808
 Transform:
   m_ObjectHideFlags: 0
