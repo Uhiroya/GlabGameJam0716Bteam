@@ -45,6 +45,7 @@ public class GunManager : MonoBehaviour
                 }
                 else
                 {
+                    result = value;
                     break;
                 }
             }
@@ -81,6 +82,7 @@ public class GunManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && _shotTime > _shotInterval)
         {
             var result = await ChargeShot();
+            result = Mathf.Clamp(result, 0.3f, 1f);
             Debug.Log($"result{result}");
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
