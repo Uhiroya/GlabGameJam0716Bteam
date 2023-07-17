@@ -12,7 +12,7 @@ using Cysharp.Threading.Tasks;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    Text scoreText;
+    public static Text scoreText;
     [SerializeField]
     Text timeText;
     [SerializeField]
