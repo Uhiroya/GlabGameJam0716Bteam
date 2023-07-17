@@ -17,11 +17,11 @@ public class ResultManager : MonoBehaviour
     void Start()
     {
         GunResult.text = $"{SaveManager.ShootResult}‰~";
-        FishResult.text =$"{SaveManager.GoldFishingResult}‰~";
+        FishResult.text =$"{ScoopController._score}‰~";
         //SumResult.text = "" + UIManager.scoreText + "‰~";
-        SumResult.text = $"{UIManager.scoreText}‰~";
+        SumResult.text = $"{SaveManager.ShootResult + ScoopController._score}‰~";
 
-        Invoke("ChangeScene", 4);
+        Invoke("ChangeScene", 5);
     }
 
     // Update is called once per frame
