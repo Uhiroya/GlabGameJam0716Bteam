@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 
@@ -14,7 +16,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Text timeText;
 
-    //int score = 0;
+   public  string sceneName;
+
+    
 
 
     public int countdownMinutes = 3;
@@ -36,7 +40,7 @@ public class UIManager : MonoBehaviour
 
         if (countdownSeconds <= 0)
         {
-            //‚O•b‚É‚È‚Á‚½Žž‚Ìˆ—
+            Invoke("ChangeScene", 1);
         }
             
         ExpressMoney();
@@ -46,5 +50,10 @@ public class UIManager : MonoBehaviour
     {
        // score += point;
         scoreText.text = "" + SaveManager.Money;
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
