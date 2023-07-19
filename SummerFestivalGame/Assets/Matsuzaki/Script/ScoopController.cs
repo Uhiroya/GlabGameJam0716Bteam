@@ -27,7 +27,7 @@ public class ScoopController : MonoBehaviour
 
     void Start()
     {
-        
+        _score = 0;
     }
 
     

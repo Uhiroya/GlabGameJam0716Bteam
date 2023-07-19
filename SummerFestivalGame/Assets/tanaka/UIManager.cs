@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
-using System;
 using Cysharp.Threading.Tasks;
 
 
@@ -28,12 +27,13 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         _fastBGMflag = true;
         countdownSeconds = countdownMinutes * 60;
     }
 
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         countdownSeconds -= Time.deltaTime;
         var span = new TimeSpan(0, 0, (int)countdownSeconds);

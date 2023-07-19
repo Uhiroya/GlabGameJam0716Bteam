@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/UedaFolder/TitleScene.unity
+    path: Assets/Scenes/BuildScenes/TitleScene.unity
     guid: 98114ab778057b840ab70ce1ba4dc0de
   - enabled: 1
-    path: Assets/UedaFolder/Shoting1.unity
+    path: Assets/Scenes/BuildScenes/Shoting1.unity
     guid: 916249cda148b6048aeacfdf59b8a4f6
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/GoldFish.unity
+    guid: 9faccfdd0ec944f4589e6443fe842ccd
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/ResultScene.unity
+    guid: 6064042e6bc6aae46a60185e73b1d7fa
   m_configObjects: {}
