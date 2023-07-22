@@ -1,7 +1,9 @@
 # GlabGameJam0716Bteam
 
 ## タイトル
-夏の屋台で荒稼ぎ
+夏の屋台で荒稼ぎ！
+
+ <img src="https://github.com/Uhiroya/GlabGameJam0716Bteam/blob/main/SummerFestivalGame/Assets/UedaFolder/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E7%94%BB%E9%9D%A2/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E7%94%BB%E9%9D%A2.png" width="50%" />
 
 ## 概要  
 射的と金魚すくいで稼ぎまくれ！
@@ -12,7 +14,7 @@
 ## 操作説明
 射的 : 左クリック長押し
 
-金魚すくい : クリック長押し
+金魚すくい : 左クリック
 
 ## ルール説明
 射的 : チャージショットで商品を落とそう！
